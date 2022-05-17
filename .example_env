@@ -1,0 +1,2 @@
+PORT=3000
+PG_URI=postgresql://postgres:PASSWORD@localhost:5432/music_tour
