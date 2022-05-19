@@ -15,24 +15,24 @@ module.exports = (sequelize, DataTypes) => {
   }
   Band.init({
     band_id: {
-        DataTypes.INTEGER,
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
     name: {
-        DataTypes.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     genre: {
-        DataTypes.TEXT,
+        type: DataTypes.TEXT,
         allowNull: false
     },
     available_start_time: {
-        DataTypes.DATE,
+        type: DataTypes.DATE,
         allowNull: false
     },
     end_time: {
-        DataTypes.DATE,
+        type: DataTypes.DATE,
         allowNull: false
     }
   }, {
