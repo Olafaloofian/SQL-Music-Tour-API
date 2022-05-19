@@ -18,19 +18,19 @@ module.exports = (sequelize, DataTypes) => {
         DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
-    }
+    },
     name: {
         DataTypes.STRING,
         allowNull: false
-    }
+    },
     genre: {
         DataTypes.TEXT,
         allowNull: false
-    }
+    },
     available_start_time: {
         DataTypes.DATE,
         allowNull: false
-    }
+    },
     end_time: {
         DataTypes.DATE,
         allowNull: false
