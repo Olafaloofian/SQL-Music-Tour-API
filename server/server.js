@@ -11,11 +11,11 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, "..", "build")));
 
 // ROOT
-app.get('/', (req, res) => {
-    res.status(200).json({
-        message: 'Welcome to the Tour API'
-    })
-})
+// app.get('/', (req, res) => {
+//     res.status(200).json({
+//         message: 'Welcome to the Tour API'
+//     })
+// })
 
 // CONTROLLERS
 const bandController = require('./controllers/band_controller')
