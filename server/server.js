@@ -2,11 +2,13 @@
 const express = require('express')
 const app = express()
 const { Sequelize } = require('sequelize')
+const path = require("path");
 
 // CONFIGURATION / MIDDLEWARE
 require('dotenv').config()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+app.use(express.static(path.join(__dirname, "..", "build")));
 
 // ROOT
 app.get('/', (req, res) => {
@@ -25,8 +27,11 @@ app.use('/api/event', eventController)
 const stageController = require('./controllers/stage_controller')
 app.use('/api/stage', stageController)
 
-
 // LISTEN
 app.listen(process.env.PORT, () => {
     console.log(`🎸 Rockin' on port: ${process.env.PORT}`)
+})
+
+app.get('*', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../build/index.html'));
 })
